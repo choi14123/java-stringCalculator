@@ -6,10 +6,10 @@ public class Repeat {
     private int totalResultNumber;
 
     public Repeat(List<Integer> numbers, List<String> operators, int operatorsSize) {
-        loop(numbers, operators, operatorsSize);
+        repeatFourOperations(numbers, operators, operatorsSize);
     }
 
-    private int loop(List<Integer> numbers, List<String> operators, int operatorsSize) {
+    private void repeatFourOperations(List<Integer> numbers, List<String> operators, int operatorsSize) {
         FourOperations fourOperations = new FourOperations(numbers.get(0), numbers.get(1), operators.get(0));
         totalResultNumber = fourOperations.getResult();
 
@@ -17,7 +17,6 @@ public class Repeat {
             FourOperations result = new FourOperations(totalResultNumber, numbers.get(i + 1), operators.get(i));
             totalResultNumber = result.getResult();
         }
-        return totalResultNumber;
     }
 
     public int getTotalNumber() {
