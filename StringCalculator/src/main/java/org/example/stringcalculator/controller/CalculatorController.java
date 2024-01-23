@@ -14,9 +14,9 @@ public class CalculatorController {
     public CalculatorController() {
         InputView inputView = new InputView();
         String[] values = inputView.array();
-        this.outputView = new OutputView();
         this.numbers = new Numbers(values);
         this.operators = new Operators(values);
+        this.outputView = new OutputView();
     }
 
     public void start() {
