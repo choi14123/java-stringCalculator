@@ -7,18 +7,19 @@ import org.example.stringcalculator.view.InputView;
 import org.example.stringcalculator.view.OutputView;
 
 public class CalculatorController {
-    private final InputView inputView;
     private final OutputView outputView;
+    private final Numbers numbers;
+    private final Operators operators;
 
     public CalculatorController() {
-        this.inputView = new InputView();
+        InputView inputView = new InputView();
+        String[] values = inputView.array();
         this.outputView = new OutputView();
+        this.numbers = new Numbers(values);
+        this.operators = new Operators(values);
     }
 
     public void start() {
-        String[] values = inputView.array();
-        Numbers numbers = new Numbers(values);
-        Operators operators = new Operators(values);
         Repeat repeat = new Repeat(numbers.getNumbers(), operators.getOperators(), operators.getOperatorsSize());
         outputView.printResult(repeat.getTotalNumber());
     }
