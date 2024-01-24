@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class RepeatTest {
     @Test
-    @DisplayName("최종 결과 값이 나온다.")
+    @DisplayName("사칙연산 값이 나온다.")
     void loopTest() {
         //given
         List<Integer> numbers = new ArrayList<>();
