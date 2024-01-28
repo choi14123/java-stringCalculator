@@ -5,11 +5,7 @@ import java.util.List;
 public class Logic {
     private int totalResultNumber;
 
-    public Logic(List<Integer> numbers, List<String> operators, int operatorsSize) {
-        repeatFourBasicOperation(numbers, operators, operatorsSize);
-    }
-
-    private void repeatFourBasicOperation(List<Integer> numbers, List<String> operators, int operatorsSize) {
+    public void repeatFourBasicOperation(List<Integer> numbers, List<String> operators, int operatorsSize) {
         FourBasicOperation fourBasicOperation = new FourBasicOperation();
         totalResultNumber = fourBasicOperation.fourOperations(numbers.get(0), numbers.get(1), operators.get(0));
         for (int i = 1; i < operatorsSize; i++) {
