@@ -22,6 +22,5 @@ public class CalculatorController {
     public void start() {
         Logic logic = new Logic(numbers.getNumbers(), operators.getOperators(), operators.getOperators().size());
         outputView.printResult(logic.getTotalNumber());
-
     }
 }
