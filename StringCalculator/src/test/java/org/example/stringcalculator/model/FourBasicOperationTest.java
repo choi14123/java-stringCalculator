@@ -19,7 +19,7 @@ class FourBasicOperationTest {
     }
 
     @Test
-    @DisplayName("빼기 테스트")
+    @DisplayName("4와 1을 빼면 3이 된다. 빼기 테스트")
     void subtractTest() {
         //given
         //when
@@ -29,7 +29,7 @@ class FourBasicOperationTest {
     }
 
     @Test
-    @DisplayName("곱하기 테스트")
+    @DisplayName("1과 3을 곱하면 3이 된다. 곱하기 테스트")
     void multiplyTest() {
         //given
         //when
@@ -39,7 +39,7 @@ class FourBasicOperationTest {
     }
 
     @Test
-    @DisplayName("나누기 테스트")
+    @DisplayName("4와 2를 나누면 2가 된다. 나누기 테스트")
     void divideTest() {
         //given
         //when
