@@ -50,7 +50,7 @@ class FourBasicOperationTest {
 
     @Test
     @DisplayName("나누기에는 숫자가 0이 입력되면 안됩니다. IllegalArgumentException 예외 발생.")
-    void validateNumber() {
+    void validateCheckNumberZeroTest() {
         //given
         //when
         //then
