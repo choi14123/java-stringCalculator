@@ -15,7 +15,8 @@ class OperatorsTest {
         //when
         Operators operators = new Operators(values);
         //then
-        Assertions.assertThat(operators.getOperators().size()).isEqualTo(2);
+        Assertions.assertThat(operators.getOperators().get(0)).isEqualTo("+");
+        Assertions.assertThat(operators.getOperators().get(1)).isEqualTo("/");
     }
 
     @Test
