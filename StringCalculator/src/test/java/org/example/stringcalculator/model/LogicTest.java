@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class LogicTest {
     @Test
     @DisplayName("사칙연산 후 최종 값이 나온다.")
-    void loopTest() {
+    void repeatFourBasicOperationTest() {
         //given
         List<Integer> numbers = Arrays.asList(10, 5, 3, 10, 2);
         List<String> operators = Arrays.asList("+", "-", "*", "/");
