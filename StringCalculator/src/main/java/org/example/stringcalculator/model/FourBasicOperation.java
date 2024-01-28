@@ -11,7 +11,7 @@ public class FourBasicOperation {
             return number - number1;
         }
         if (operator.equals("/")) {
-            validateNumber(number1);
+            validateCheckNumberZero(number1);
             return number / number1;
         }
         if (operator.equals("*")) {
@@ -21,7 +21,7 @@ public class FourBasicOperation {
         return number;
     }
 
-    private void validateNumber(int number1) {
+    private void validateCheckNumberZero(int number1) {
         if (number1 == 0) {
             throw new IllegalArgumentException(EXCEPTION_MESSAGE);
         }
