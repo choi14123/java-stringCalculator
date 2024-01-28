@@ -28,8 +28,4 @@ public class Operators {
     public List<String> getOperators() {
         return operators;
     }
-
-    public int getOperatorsSize() {
-        return operators.size();
-    }
 }
