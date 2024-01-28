@@ -5,21 +5,17 @@ public class FourBasicOperation {
 
     public int fourOperations(int number, int number1, String operator) {
         if (operator.equals("+")) {
-            int result = number + number1;
-            return result;
+            return number + number1;
         }
         if (operator.equals("-")) {
-            int result = number - number1;
-            return result;
+            return number - number1;
         }
         if (operator.equals("/")) {
             validateNumber(number1);
-            int result = number / number1;
-            return result;
+            return number / number1;
         }
         if (operator.equals("*")) {
-            int result = number * number1;
-            return result;
+            return number * number1;
         }
 
         return number;
