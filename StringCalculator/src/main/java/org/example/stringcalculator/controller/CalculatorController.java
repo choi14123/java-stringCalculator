@@ -1,8 +1,8 @@
 package org.example.stringcalculator.controller;
 
+import org.example.stringcalculator.model.Logic;
 import org.example.stringcalculator.model.Numbers;
 import org.example.stringcalculator.model.Operators;
-import org.example.stringcalculator.model.Repeat;
 import org.example.stringcalculator.view.InputView;
 import org.example.stringcalculator.view.OutputView;
 
@@ -20,7 +20,8 @@ public class CalculatorController {
     }
 
     public void start() {
-        Repeat repeat = new Repeat(numbers.getNumbers(), operators.getOperators(), operators.getOperatorsSize());
-        outputView.printResult(repeat.getTotalNumber());
+        Logic logic = new Logic(numbers.getNumbers(), operators.getOperators(), operators.getOperators().size());
+        outputView.printResult(logic.getTotalNumber());
+
     }
 }
