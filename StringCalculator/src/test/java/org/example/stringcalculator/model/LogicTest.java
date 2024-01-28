@@ -14,7 +14,8 @@ class LogicTest {
         List<Integer> numbers = Arrays.asList(10, 5, 3, 10, 2);
         List<String> operators = Arrays.asList("+", "-", "*", "/");
         //when
-        Logic logic = new Logic(numbers, operators, operators.size());
+        Logic logic = new Logic();
+        logic.repeatFourBasicOperation(numbers, operators, operators.size());
         //then
         Assertions.assertThat(logic.getTotalNumber()).isEqualTo(60);
     }
