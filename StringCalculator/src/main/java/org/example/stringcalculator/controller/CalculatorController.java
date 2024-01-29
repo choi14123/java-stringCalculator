@@ -7,7 +7,6 @@ import org.example.stringcalculator.view.InputView;
 import org.example.stringcalculator.view.OutputView;
 
 public class CalculatorController {
-
     private final InputView inputView;
     private final Logic logic;
     private final OutputView outputView;
