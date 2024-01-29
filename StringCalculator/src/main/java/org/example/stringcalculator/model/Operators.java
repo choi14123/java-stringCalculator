@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Operators {
-    private static final String EXCEPTION_MESSAGE = " 잘못된 operator를 입력하였습니다.";
+    private static final String WRONG_OPERATOR_INPUT_EXCEPTION_MESSAGE = " 잘못된 operator를 입력하였습니다.";
     private List<String> operators = new ArrayList<>();
 
     public Operators(String[] values) {
-        operators = convertToOperatorsList(values);
+        operators = addToOperatorsList(values);
     }
 
-    private List<String> convertToOperatorsList(String[] values) {
+    private List<String> addToOperatorsList(String[] values) {
         for (int i = 1; i < values.length; i += 2) {
             validateOperator(values[i]);
             operators.add(values[i]);
@@ -21,7 +21,7 @@ public class Operators {
 
     private void validateOperator(String value) {
         if (!(value.equals("+") || value.equals("-") || value.equals("*") || value.equals("/"))) {
-            throw new IllegalArgumentException(value + EXCEPTION_MESSAGE);
+            throw new IllegalArgumentException(WRONG_OPERATOR_INPUT_EXCEPTION_MESSAGE);
         }
     }
 
