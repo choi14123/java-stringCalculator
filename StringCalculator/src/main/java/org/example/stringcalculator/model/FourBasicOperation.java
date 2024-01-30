@@ -3,7 +3,7 @@ package org.example.stringcalculator.model;
 public class FourBasicOperation {
     private static final String EXCEPTION_MESSAGE = "나누기에는 0이 입력되면 안됩니다.";
 
-    public int fourOperations(int number, int number1, String operator) {
+    public int getTotalResultNumberByNumber(int number, int number1, String operator) {
         if (operator.equals("+")) {
             return number + number1;
         }
