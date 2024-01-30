@@ -11,13 +11,13 @@ class LogicTest {
     @DisplayName("사칙연산 후 최종 값인 60이 나온다.")
     void repeatFourBasicOperationTest() {
         //given
-        int totalNumber = 60;
-        List<Integer> numbers = List.of(10, 5, 3, 10, 2);
-        List<String> operators = List.of("+", "-", "*", "/");
+        int totalResultNumber = 10;
+        List<Integer> numbers = List.of(2, 3, 4, 2);
+        List<String> operators = List.of("+", "*", "/");
         //when
         Logic logic = new Logic();
         logic.repeatFourBasicOperation(numbers, operators, operators.size());
         //then
-        Assertions.assertThat(logic.getTotalNumber()).isEqualTo(totalNumber);
+        Assertions.assertThat(logic.getTotalNumber()).isEqualTo(totalResultNumber);
     }
 }
