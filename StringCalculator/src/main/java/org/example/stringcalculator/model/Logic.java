@@ -9,7 +9,10 @@ public class Logic {
     private int totalResultNumber;
 
     public void repeatFourBasicOperation(List<Integer> numbers, List<String> operators, int operatorsSize) {
-        totalResultNumber = fourBasicOperation.getTotalResultNumber(numbers.get(0), numbers.get(1), operators.get(0));
+        int number = numbers.get(0);
+        int number1 = numbers.get(1);
+        String operator = operators.get(0);
+        totalResultNumber = fourBasicOperation.getTotalResultNumber(number, number1, operator);
         IntStream.range(1, operatorsSize).forEach(
                 i -> totalResultNumber = fourBasicOperation.getTotalResultNumber(totalResultNumber, numbers.get(i + 1),
                         operators.get(i)));
