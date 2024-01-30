@@ -18,7 +18,7 @@ class FourBasicOperationTest {
         //given
         FourBasicOperation fourBasicOperation = new FourBasicOperation();
         //when
-        int result = fourBasicOperation.getTotalResultNumberByNumber(number, number1, operator);
+        int result = fourBasicOperation.getTotalResultNumber(number, number1, operator);
         //then
         Assertions.assertThat(result).isEqualTo(totalNumber);
     }
@@ -38,7 +38,7 @@ class FourBasicOperationTest {
         //given
         //when
         //then
-        assertThatThrownBy(() -> new FourBasicOperation().getTotalResultNumberByNumber(4, 0, "/")).isInstanceOf(
+        assertThatThrownBy(() -> new FourBasicOperation().getTotalResultNumber(4, 0, "/")).isInstanceOf(
                         IllegalArgumentException.class)
                 .hasMessage("나누기에는 0이 입력되면 안됩니다.");
     }
