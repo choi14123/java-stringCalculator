@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class LogicTest {
     @Test
-    @DisplayName("사칙연산 후 최종 값인 60이 나온다.")
+    @DisplayName("사칙연산 후 최종 값이 반환된다.")
     void repeatFourBasicOperationTest() {
         //given
         int totalResultNumber = 10;
