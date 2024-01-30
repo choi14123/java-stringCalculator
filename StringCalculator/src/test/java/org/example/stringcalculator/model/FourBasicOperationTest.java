@@ -12,9 +12,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 class FourBasicOperationTest {
     @ParameterizedTest
-    @MethodSource("fourOperationsTest")
+    @MethodSource("getTotalResultNumberTest")
     @DisplayName("두 수와 연산자를 넣으면 계산한 후 최종 값을 반환한다.")
-    void fourOperationsTest(int number, int number1, String operator, int totalNumber) {
+    void getTotalResultNumberTest(int number, int number1, String operator, int totalNumber) {
         //given
         FourBasicOperation fourBasicOperation = new FourBasicOperation();
         //when
@@ -23,7 +23,7 @@ class FourBasicOperationTest {
         Assertions.assertThat(result).isEqualTo(totalNumber);
     }
 
-    private static Stream<Arguments> fourOperationsTest() {
+    private static Stream<Arguments> getTotalResultNumberTest() {
         return Stream.of(
                 Arguments.of(4, 2, "+", 6),
                 Arguments.of(4, 2, "-", 2),
