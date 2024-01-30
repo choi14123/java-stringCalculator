@@ -17,7 +17,6 @@ public class FourBasicOperation {
         if (operator.equals("*")) {
             return number * number1;
         }
-
         return number;
     }
 
