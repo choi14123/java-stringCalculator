@@ -1,7 +1,6 @@
 package org.example.stringcalculator.controller;
 
 import java.util.List;
-import java.util.stream.IntStream;
 import org.example.stringcalculator.model.CalculatorMapping;
 import org.example.stringcalculator.model.Numbers;
 import org.example.stringcalculator.model.Operators;
@@ -28,14 +27,12 @@ public class StringCalculatorController {
         outputView.totalResultNumber(calculationResult);
     }
 
-    private int repeatFourBasicOperation(List<Integer> numbers, List<String> operators, int operatorsSize) {
-        int number = numbers.get(0);
-        int number1 = numbers.get(1);
-        String operator = operators.get(0);
+    public int repeatFourBasicOperation(List<Integer> numbers, List<String> operators, int operatorsSize) {
 
-        int calculationResult = CalculatorMapping.getCalculator(operator).calculate(number, number1);
-
-        return IntStream.range(1, operatorsSize).map(i -> CalculatorMapping.getCalculator(operators.get(i))
-                .calculate(calculationResult, numbers.get(i + 1))).findFirst().orElse(calculationResult);
+        int totalResultNumber = CalculatorMapping.getCalculator(operators.get(0))
+                .calculate(numbers.get(0), numbers.get(1));
+        int b = CalculatorMapping.getCalculator(operators.get(1)).calculate(totalResultNumber, numbers.get(2));
+        int a = CalculatorMapping.getCalculator(operators.get(2)).calculate(b, numbers.get(3));
+        return a;
     }
 }
